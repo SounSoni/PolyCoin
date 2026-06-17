@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolyCoin Core - Native Layer 1 Blockchain</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --accent: #3b82f6;
+            --terminal-bg: #1e293b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        .step-list {
+            margin-top: 1.5rem;
+        }
+
+        .step-item {
+            margin-bottom: 2rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        code {
+            background-color: #e2e8f0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #ef4444;
+        }
+
+        pre {
+            background-color: var(--terminal-bg);
+            color: #38bdf8;
+            padding: 1rem;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: monospace;
+            margin: 0.75rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--dark);
+            color: #64748b;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to PolyCoin Core</h1>
+        <p style="margin-top: 1rem; color: #94a3b8; font-size: 1.2rem;">A secure, decentralized, CPU-mineable Layer 1 cryptocurrency framework.</p>
+        <a href="polycoin-qt-linux.tar.gz" download="polycoin-qt-linux.tar.gz" class="btn">Download Linux Wallet Binary (.tar.gz)</a>
+    </header>
+
+    <div class="container">
+        
+        <section id="installation">
+            <h2>Ubuntu Installation Guide</h2>
+            <p style="color: #64748b;">Follow these simple terminal steps to extract, configure, and open your desktop graphical wallet:</p>
+            
+            <div class="step-list">
+                <div class="step-item">
+                    <div class="step-number">Step 1: Extract the downloaded package archive</div>
+                    <p>Open your terminal, navigate to the directory where you saved your file, and run:</p>
+                    <pre>cd ~/Downloads
+tar -xzvf polycoin-qt-linux.tar.gz</pre>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">Step 2: Assign proper file execution permissions</div>
+                    <p>Ensure your Linux security layer allows the system binary setup environment to open natively:</p>
+                    <pre>chmod +x polycoin-qt</pre>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">Step 3: Create the dedicated data profile directory</div>
+                    <p>Your wallet configuration tracking framework requires a local data storage folder structure to handle blocks:</p>
+                    <pre>mkdir -p ./polycoin_data</pre>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">Step 4: Launch the core application interface workspace</div>
+                    <p>Fire up your GUI software module dashboard directly pointing to your target folder profile:</p>
+                    <pre>./polycoin-qt -datadir=./polycoin_data</pre>
+                    <p style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">💡 <em>Tip: Alternatively, you can simply double-click the extracted <code>polycoin-qt</code> binary file directly inside your Ubuntu Files manager application interface to open it automatically!</em></p>
+                </div>
+            </div>
+        </section>
+
+        <hr style="border: 0; border-top: 1px solid #cbd5e1; margin: 3rem 0;">
+
+        <section id="specs">
+            <h2>Network Specifications</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Decentralized Consensus</h3>
+                    <p>Built using standard Proof-of-Work (PoW) security parameters keeping individual nodes protected globally.</p>
+                </div>
+                <div class="card">
+                    <h3>Fair Distribution</h3>
+                    <p>Designed for optimized solo CPU mining. No massive ASIC data centers required to secure early block processing blocks.</p>
+                </div>
+                <div class="card">
+                    <h3>Network Ports</h3>
+                    <p>P2P Port: <code>23333</code><br>RPC Port: <code>23332</code></p>
+                </div>
+            </div>
+        </section>
+
+        <hr style="border: 0; border-top: 1px solid #cbd5e1; margin: 3rem 0;">
+
+        <section id="mining">
+            <h2>How to Start Mining PolyCoin</h2>
+            <p style="margin-top: 1rem;">Once your wallet dashboard opens, navigate into the build developer terminal console tools block and input:</p>
+            <pre># Generate your primary block receiving address line item
+getnewaddress
+
+# Start mining targeted block assets seamlessly
+generatetoaddress 1 "YOUR_GENERATED_ADDRESS"</pre>
+            <p style="font-size: 0.9rem; color: #64748b;">*Remember: Newly generated block mining assets require a 100 block maturity confirmation verification window before they shift to spendable balances.*</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 PolyCoin Core Project. Open source codebase released under the MIT License framework.</p>
+    </footer>
+
+</body>
+</html>
